@@ -2,7 +2,7 @@ const lengthProperty = (array) => {
   let i = 0;
   
   for (i in array) {
-    if (i++);
+    i++;
   }
   
   return i;
