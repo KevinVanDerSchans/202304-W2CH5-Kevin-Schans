@@ -1,0 +1,36 @@
+{
+  "name": "w2-ch4-kevin-lanza",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "type": "module",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinVanDerSchans/w2-ch4-kevin-lanza.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinVanDerSchans/w2-ch4-kevin-lanza/issues"
+  },
+  "homepage": "https://github.com/KevinVanDerSchans/w2-ch4-kevin-lanza#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5"
+  },
+  "babel": {
+    "env": {
+        "test": {
+            "plugins": [
+                "@babel/plugin-transform-modules-commonjs"
+            ]
+        }
+    }
+  }
+}
