@@ -1,6 +1,7 @@
 const lengthProperty = (array) => {
   let i = 0;
   
+  // eslint-disable-next-line guard-for-in
   for (i in array) {
     i++;
   }
