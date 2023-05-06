@@ -1,27 +1,32 @@
-Week 2 - Challenge 4
-Array methods
-Implementa, por parejas, funciones que simulen el comportamiento de los métodos de Array y que tenga estos métodos y propiedades:
+Functions for Array methods
 
-length
-push
-some
-find
-filter
-map
-No se pueden usar arrays ni métodos de arrays (sólo se puede usar el operador rest).
+​Crea un modulo con funciones que repliquen, sin utilizar ninguno de los métodos ya existentes en el prototipo, los siguientes métodos de array:
 
-Testea las funciones.
+length,
+push,
+pop,
+unshift,
+shift,
+some,
+every,
+find,
+filter,
+map,
+findIndex,
+includes,
+indexOf,
+reduce,
+join
 
-Para crear un array con vuestra función, se debería hacer así:
+Cualquiera de tus funciones puede usar las que ya hayas creado.
 
-const numbers = CodersArray(3, 8, 10, 2);
+Testea TODOS los métodos
 
-const names = CodersArray("Marta", "Luis", "Pere");
+Extra
+Si ya tienes más de una función: haz un interfaz en HTML
 
-Pistas:
+Crear un array
+Seleccionar una función
+Ver el resultado
 
-En modelos mentales hemos visto los tipos de datos que existen en JavaScript. ¿Existe un tipo array? ¿Qué nos dice typeof?
-Cada vez que vayais a implementar un método, primero estudiad en la documentación el método real y apuntad qué recibe, qué hace y qué devuelve, luego pensad como implementarlo.
-El array creado no debe tener propiedades o métodos que no estén en los arrays de JS.
-Example
-image example
+Esto NO se testea
