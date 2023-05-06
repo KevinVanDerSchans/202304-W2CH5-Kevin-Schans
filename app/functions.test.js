@@ -1,4 +1,4 @@
-import based from "./index";
+import functions from "./functions";
 
 describe("Given a length function", () => {
   describe("When it receives the array ['hola', 'adios', 'avion', 'casa', 'coche']", () => {
@@ -6,7 +6,7 @@ describe("Given a length function", () => {
       const randomWords = ["hola", "adios", "avion", "casa", "coche"];
       const result = 5;
 
-      const expectedResult = based.lengthProperty(randomWords);
+      const expectedResult = functions.lengthProperty(randomWords);
 
       expect(expectedResult).toBe(result);
     });
@@ -19,7 +19,7 @@ describe("Given a push function", () => {
       const randomWords = ["hola", "adios", "avion", "casa", "coche"];
       const result = 6;
 
-      const expectedResult = based.pushProperty(randomWords, "barco");
+      const expectedResult = functions.pushProperty(randomWords, "barco");
 
       expect(expectedResult).toBe(result);
     });
@@ -33,7 +33,7 @@ describe("Given a some function", () => {
       const parameter = "casa";
       const result = true;
 
-      const expectedResult = based.someProperty(randomWords, parameter);
+      const expectedResult = functions.someProperty(randomWords, parameter);
 
       expect(expectedResult).toBe(result);
     });
@@ -47,7 +47,7 @@ describe("Given a find function", () => {
       const parameter = "casa";
       const result = "casa";
 
-      const expectedResult = based.findProperty(randomWords, parameter);
+      const expectedResult = functions.findProperty(randomWords, parameter);
 
       expect(expectedResult).toBe(result);
     });
