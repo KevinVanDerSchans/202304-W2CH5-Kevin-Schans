@@ -53,3 +53,33 @@ describe("Given a find function", () => {
     });
   });
 });
+
+describe("Given a shift function", () => {
+  describe("When it receives randomWords array", () => {
+    test("Then it should return the word in the first position and change the array's length", () => {
+      const randomWords = ["hola", "adios", "avion", "casa", "coche"];
+      const result = "hola";
+
+      const expectedResult = based.shiftProperty(randomWords);
+
+      expect(expectedResult).toBe(result);
+    });
+  });
+});
+
+describe("Given an unshift function", () => {
+  describe(`When it receives randomWords array, and "gato" and "waterski" as parameters`, () => {
+    test("Then it should return the new words at the start of the array", () => {
+      const randomWords = ["hola", "adios", "avion", "casa", "coche"];
+      const result = 7;
+
+      const expectedResult = based.unshiftProperty(
+        randomWords,
+        "gato",
+        "waterski"
+      );
+
+      expect(expectedResult).toBe(result);
+    });
+  });
+});

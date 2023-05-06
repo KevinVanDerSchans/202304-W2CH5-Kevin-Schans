@@ -1,10 +1,10 @@
 const lengthProperty = (array) => {
   let i = 0;
-  
+
   for (i in array) {
     i++;
   }
-  
+
   return i;
 };
 
@@ -45,10 +45,35 @@ const findProperty = (array, parameter) => {
   return undefined;
 };
 
+const shiftProperty = (array) => {
+  if (lengthProperty(array) === 0) {
+    return undefined;
+  }
+
+  let firstIndex = array[0];
+  for (let i = 0; i < lengthProperty(array); i++) {
+    array[i - 1] = array[i];
+  }
+
+  popProperty(array);
+  return firstIndex;
+};
+
+const unshiftProperty = (array, ...element) => {
+  if (lengthProperty(array) === 0) {
+    return undefined;
+  }
+  console.log((array = [...element, ...array]));
+
+  return lengthProperty(array);
+};
+
 export default {
   lengthProperty,
   pushProperty,
   popProperty,
   someProperty,
   findProperty,
+  shiftProperty,
+  unshiftProperty,
 };

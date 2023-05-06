@@ -1,7 +1,6 @@
 {
   "name": "w2-ch4-kevin-lanza",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "type": "module",
@@ -27,7 +26,8 @@
   "dependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.21.5"
   },
-  "babel": {
+  "description": ""
+ , "babel": {
     "env": {
       "test": {
         "plugins": [
@@ -36,4 +36,4 @@
       }
     }
   }
-}
+  } 
