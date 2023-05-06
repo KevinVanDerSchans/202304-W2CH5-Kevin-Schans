@@ -1,10 +1,10 @@
 import functions from "./functions";
 
 describe("Given a length function", () => {
-  describe("When it receives the array ['hola', 'adios', 'avion', 'casa', 'coche']", () => {
-    test("Then it should return 5", () => {
-      const randomWords = ["hola", "adios", "avion", "casa", "coche"];
-      const result = 5;
+  describe("When it receives the array ['java', 'javascript', 'python', 'C++']", () => {
+    test("Then it should return 4", () => {
+      const randomWords = ["java", "javascript", "python", "C++"];
+      const result = 4;
 
       const expectedResult = functions.lengthProperty(randomWords);
 
