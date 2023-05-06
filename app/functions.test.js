@@ -1,7 +1,7 @@
 import functions from "./functions";
 
 describe("Given a length function", () => {
-  describe("When it receives the array ['java', 'javascript', 'python', 'C++']", () => {
+  describe("When it receives the array '['java', 'javascript', 'python', 'C++']'", () => {
     test("Then it should return 4", () => {
       const randomWords = ["java", "javascript", "python", "C++"];
       const result = 4;
@@ -14,12 +14,25 @@ describe("Given a length function", () => {
 });
 
 describe("Given a push function", () => {
-  describe("When it receives 'barco'", () => {
-    test("Then it should return 6", () => {
-      const randomWords = ["hola", "adios", "avion", "casa", "coche"];
-      const result = 6;
+  describe("When it receives 'PHP'", () => {
+    test("Then it should return 5", () => {
+      const randomWords = ["java", "javascript", "python", "C++"];
+      const result = 5;
 
-      const expectedResult = functions.pushProperty(randomWords, "barco");
+      const expectedResult = functions.pushProperty(randomWords, "PHP");
+
+      expect(expectedResult).toBe(result);
+    });
+  });
+});
+
+describe("Given a pop function", () => {
+  describe("When it receives the array '['java', 'javascript', 'python', 'C++']'", () => {
+    test("Then it should return C++", () => {
+      const randomWords = ["java", "javascript", "python", "C++"];
+      const result = "C++";
+
+      const expectedResult = functions.popProperty(randomWords);
 
       expect(expectedResult).toBe(result);
     });

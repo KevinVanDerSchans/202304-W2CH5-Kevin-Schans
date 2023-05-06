@@ -1,25 +1,25 @@
 const lengthProperty = (array) => {
-  let i = 0;
+  let index = 0;
   
   // eslint-disable-next-line guard-for-in
-  for (i in array) {
-    i++;
+  for (index in array) {
+    index++;
   }
   
-  return i;
+  return index;
 };
 
-const pushProperty = (array, ...newElement) => {
-  const openedArray = [...array];
+const pushProperty = (array, ...newElements) => {
+  const newArray = [...array];
 
-  const newPushedArray = [...openedArray, ...newElement];
+  const totalArrayElements = [...newArray, ...newElements];
 
-  return lengthProperty(newPushedArray);
+  return lengthProperty(totalArrayElements);
 };
 
 const popProperty = (array) => {
-  const popPosition = lengthProperty(array);
-  return array[popPosition - 1];
+  const totalArrayElements = lengthProperty(array);
+  return array[totalArrayElements - 1];
 };
 
 const someProperty = (array, parameter) => {
