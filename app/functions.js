@@ -22,6 +22,25 @@ const popProperty = (array) => {
   return array[totalArrayElements - 1];
 };
 
+const unshiftProperty = (array, ...newElements) => {
+  const totalArrayElements = [...newElements, ...array,]
+
+  const totalArrayLength = lengthProperty(totalArrayElements);
+
+  return totalArrayLength;
+};
+
+
+
+
+
+
+
+
+
+
+
+
 const someProperty = (array, parameter) => {
   const newLength = lengthProperty(array);
 
@@ -50,6 +69,7 @@ export default {
   lengthProperty,
   pushProperty,
   popProperty,
+  unshiftProperty,
   someProperty,
   findProperty,
 };
