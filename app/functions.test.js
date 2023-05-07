@@ -106,3 +106,17 @@ describe("Given a filter function", () => {
     });
   });
 });
+
+describe("Given a includes function", () => {
+  describe("When it receives the array '['java', 'javascript', 'python', 'C++']'", () => {
+    test("Then it should return true]'", () => {
+      const defaultArray = ['java', 'javascript', 'python', 'C++'];
+      const element = 'python';
+      const result = true;
+
+      const expectedResult = functions.includesProperty(defaultArray, element);
+
+      expect(expectedResult).toBe(result);
+    });
+  });
+});

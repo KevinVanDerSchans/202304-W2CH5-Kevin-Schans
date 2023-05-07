@@ -76,7 +76,11 @@ const filterProperty = (array, element) => {
   return filteredElement;
 };
 
-
+const includesProperty = (array) => {
+  if (array.find((element) => element)) {
+    return true;
+  }
+};
 
 
 export default {
@@ -88,4 +92,5 @@ export default {
   someProperty,
   findProperty,
   filterProperty,
+  includesProperty,
 };
