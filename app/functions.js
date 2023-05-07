@@ -1,11 +1,11 @@
 const lengthProperty = (array) => {
-  let index = 0;
+  let i = 0;
   
-  for (index in array) {
-    index++;
+  for (i in array) {
+    i++;
   }
   
-  return index;
+  return i;
 };
 
 const pushProperty = (array, ...newElements) => {
