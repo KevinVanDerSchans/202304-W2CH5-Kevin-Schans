@@ -40,19 +40,11 @@ const shiftProperty = (array) => {
   return firstArrayElement;
 };
 
+const someProperty = (array, element) => {
+  const totalArrayLength = lengthProperty(array);
 
-
-
-
-
-
-
-
-const someProperty = (array, parameter) => {
-  const newLength = lengthProperty(array);
-
-  for (let i = 0; i < newLength; i++) {
-    if (array[i] === parameter) {
+  for (let i = 0; i < totalArrayLength; i++) {
+    if (array[i] === element) {
       return true;
     }
   }
