@@ -82,6 +82,16 @@ const includesProperty = (array) => {
   }
 };
 
+const joinProperty = (array, element) => {
+  const joinedArray = []
+
+  for (let index = 0; index < array.length; index++) {
+    const addElement = array[index] + element;
+    joinedArray.push(addElement)
+  }
+  
+  return joinedArray;
+};
 
 export default {
   lengthProperty,
@@ -93,4 +103,5 @@ export default {
   findProperty,
   filterProperty,
   includesProperty,
+  joinProperty,
 };

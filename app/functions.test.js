@@ -120,3 +120,22 @@ describe("Given a includes function", () => {
     });
   });
 });
+
+describe("Given the join function", () => {
+  describe("When it receives the array '['java', 'javascript', 'python', 'C++']'", () => {
+    test("Then it shoud join every element with the parameter", () => {
+      const defaultArray = ['java', 'javascript', 'python', 'C++'];
+      const element = '---';
+      const result = [
+        'java---',
+        'javascript---',
+        'python---',
+        'C++---',
+      ]
+
+      const expectedResult = functions.joinProperty(defaultArray, element);
+
+      expect(expectedResult).toStrictEqual(result);
+    });
+  });
+});
