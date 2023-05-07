@@ -30,8 +30,15 @@ const unshiftProperty = (array, ...newElements) => {
   return totalArrayLength;
 };
 
+const shiftProperty = (array) => {
+  const firstArrayElement = array[0];
+  for (let i = 0; i < lengthProperty(array); i++) {
+    array[i - 1] = array[i];
+  }
 
-
+  popProperty(array);
+  return firstArrayElement;
+};
 
 
 
@@ -70,6 +77,7 @@ export default {
   pushProperty,
   popProperty,
   unshiftProperty,
+  shiftProperty,
   someProperty,
   findProperty,
 };
