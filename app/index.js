@@ -9,22 +9,23 @@ const lengthProperty = (array) => {
 };
 
 const pushProperty = (array, ...newElement) => {
-  const openedArray = [...array];
+  let newPushedArray = [...newElement];
+  for (let i = 0; i < lengthProperty(newPushedArray); i++) {
+    array[lengthProperty(array)] = newPushedArray[i];
+  }
 
-  const newPushedArray = [...openedArray, ...newElement];
-
-  return lengthProperty(newPushedArray);
+  return lengthProperty(array);
 };
 
 const popProperty = (array) => {
-  const popPosition = lengthProperty(array);
-  return array[popPosition - 1];
+  const poppedElement = array[lengthProperty(array) - 1];
+  array = array.length -= 1;
+
+  return poppedElement;
 };
 
 const someProperty = (array, parameter) => {
-  const newLength = lengthProperty(array);
-
-  for (let i = 0; i < newLength; i++) {
+  for (let i = 0; i < lengthProperty(array); i++) {
     if (array[i] === parameter) {
       return true;
     }
@@ -63,9 +64,21 @@ const unshiftProperty = (array, ...element) => {
   if (lengthProperty(array) === 0) {
     return undefined;
   }
-  console.log((array = [...element, ...array]));
+  array = [...element, ...array];
 
   return lengthProperty(array);
+};
+
+const everyProperty = (array, comparator) => {
+  if (lengthProperty(array) === 0) {
+    return true;
+  }
+  for (let i = 0; i < lengthProperty(array); i++) {
+    if (array[i] !== comparator) {
+      return true;
+    }
+  }
+  return true;
 };
 
 export default {
@@ -76,4 +89,5 @@ export default {
   findProperty,
   shiftProperty,
   unshiftProperty,
+  everyProperty,
 };
