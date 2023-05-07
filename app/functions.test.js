@@ -65,24 +65,14 @@ describe("Given the shift function", () => {
   });
 });
 
-
-
-
-
-
-
-
-
-
-
 describe("Given a some function", () => {
-  describe("When it receives randomWords array, and the parameter of 'barco'", () => {
+  describe("When it receives the array '['java', 'javascript', 'python', 'C++']'; and 'python' as a parameter", () => {
     test("Then it should return true", () => {
-      const defaultArray = ["hola", "adios", "avion", "casa", "coche"];
-      const parameter = "casa";
+      const defaultArray = ['java', 'javascript', 'python', 'C++'];
+      const element = "python";
       const result = true;
 
-      const expectedResult = functions.someProperty(defaultArray, parameter);
+      const expectedResult = functions.someProperty(defaultArray, element);
 
       expect(expectedResult).toBe(result);
     });
