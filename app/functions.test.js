@@ -80,13 +80,13 @@ describe("Given a some function", () => {
 });
 
 describe("Given a find function", () => {
-  describe("When it receives randomWords array, and the parameter of 'barco'", () => {
-    test("Then it should return the word that matched the parameter", () => {
-      const defaultArray = ["hola", "adios", "avion", "casa", "coche"];
-      const parameter = "casa";
-      const result = "casa";
+  describe("When it receives the array '['java', 'javascript', 'python', 'C++']'; and 'javascript' as a parameter", () => {
+    test("Then it should return 'javascript'", () => {
+      const defaultArray = ['java', 'javascript', 'python', 'C++'];
+      const element = "javascript";
+      const result = "javascript";
 
-      const expectedResult = functions.findProperty(defaultArray, parameter);
+      const expectedResult = functions.findProperty(defaultArray, element);
 
       expect(expectedResult).toBe(result);
     });

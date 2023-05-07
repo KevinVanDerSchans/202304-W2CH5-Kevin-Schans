@@ -52,16 +52,14 @@ const someProperty = (array, element) => {
   return false;
 };
 
-const findProperty = (array, parameter) => {
-  const newLength = lengthProperty(array);
+const findProperty = (array, element) => {
+  const newArrayLength = lengthProperty(array);
 
-  for (let i = 0; i < newLength; i++) {
-    if (array[i] === parameter) {
+  for (let i = 0; i < newArrayLength; i++) {
+    if (array[i] === element) {
       return array[i];
     }
   }
-
-  return undefined;
 };
 
 export default {
