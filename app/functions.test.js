@@ -40,7 +40,7 @@ describe("Given a pop function", () => {
 });
 
 describe("Given the unshift function", () => {
-  describe("When it receives the array ['java', 'javascript', 'python', 'C++']; and 'C#' and 'R' as parameters'", () => {
+  describe("When it receives the array '['java', 'javascript', 'python', 'C++']; and 'C#' and 'R' as parameters'", () => {
     test("Then it should return 6", () => {
       const defaultArray = ['java', 'javascript', 'python', 'C++'];
       const result = 6;
@@ -52,7 +52,18 @@ describe("Given the unshift function", () => {
   });
 });
 
+describe("Given the shift function", () => {
+  describe("When it receives the array '['java', 'javascript', 'python', 'C++']'", () => {
+    test("Then it should return 'java'", () => {
+      const defaultArray = ['java', 'javascript', 'python', 'C++'];
+      const result = 'java';
 
+      const expectedResult = functions.shiftProperty(defaultArray);
+
+      expect(expectedResult).toBe(result);
+    });
+  });
+});
 
 
 
