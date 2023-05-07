@@ -92,3 +92,17 @@ describe("Given a find function", () => {
     });
   });
 });
+
+describe("Given a filter function", () => {
+  describe("When it receives the array '['java', 'javascript', 'python', 'C++']'; and 'java' as a parameter", () => {
+    test("Then it should return '['java']'", () => {
+      const defaultArray = ['java', 'javascript', 'python', 'C++'];
+      const element = 'java';
+      const result = ['java'];
+
+      const expectedResult = functions.filterProperty(defaultArray, element);
+
+      expect(expectedResult).toStrictEqual(result);
+    });
+  });
+});

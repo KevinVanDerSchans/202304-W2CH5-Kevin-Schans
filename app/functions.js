@@ -62,6 +62,23 @@ const findProperty = (array, element) => {
   }
 };
 
+const filterProperty = (array, element) => {
+  const filteredElement = [];
+  const totalArrayElements = [array, element]
+  const totalArrayLength = lengthProperty(totalArrayElements);
+
+  for (let i = 0; i < totalArrayLength; i++) {
+    if (array[i] === element) {
+      filteredElement.push(array[i])
+    }
+  }
+
+  return filteredElement;
+};
+
+
+
+
 export default {
   lengthProperty,
   pushProperty,
@@ -70,4 +87,5 @@ export default {
   shiftProperty,
   someProperty,
   findProperty,
+  filterProperty,
 };
